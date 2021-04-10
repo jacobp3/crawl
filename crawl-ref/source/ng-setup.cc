@@ -23,6 +23,7 @@
 #include "religion.h"
 #include "shopping.h"
 #include "skills.h"
+#include "species.h"
 #include "spl-book.h"
 #include "spl-damage.h"
 #include "spl-summoning.h"
@@ -569,6 +570,8 @@ static void _setup_generic(const newgame_def& ng,
     give_items_skills(ng);
 
     roll_demonspawn_mutations();
+	if (you.species == SP_BASE_DRACONIAN)
+		you.draconian_sub_species = species::random_draconian_colour();
 
     if (crawl_state.game_is_sprint())
         _give_bonus_items();

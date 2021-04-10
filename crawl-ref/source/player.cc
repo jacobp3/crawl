@@ -2722,7 +2722,7 @@ void level_change(bool skip_attribute_increase)
                 if (you.experience_level >= 7)
                 {
                     // XX make seed stable by choosing at birth
-                    you.species = species::random_draconian_colour();
+                    you.species = you.draconian_sub_species;
 
                     // We just changed our aptitudes, so some skills may now
                     // be at the wrong level (with negative progress); if we
@@ -4909,6 +4909,7 @@ player::player()
     // Permanent data:
     your_name.clear();
     species          = SP_UNKNOWN;
+    draconian_sub_species          = SP_UNKNOWN;
     char_class       = JOB_UNKNOWN;
     type             = MONS_PLAYER;
     mid              = MID_PLAYER;
