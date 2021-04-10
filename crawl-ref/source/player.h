@@ -120,6 +120,7 @@ public:
     // ---------------
     string your_name;
     species_type species;
+	species_type draconian_sub_species;
     job_type char_class;
 
     // This field is here even in non-WIZARD compiles, since the

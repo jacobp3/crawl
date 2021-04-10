@@ -2721,7 +2721,6 @@ void level_change(bool skip_attribute_increase)
             case SP_BASE_DRACONIAN:
                 if (you.experience_level >= 7)
                 {
-                    // XX make seed stable by choosing at birth
                     you.species = you.draconian_sub_species;
 
                     // We just changed our aptitudes, so some skills may now
